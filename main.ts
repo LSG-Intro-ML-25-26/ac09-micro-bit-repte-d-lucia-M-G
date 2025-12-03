@@ -1,7 +1,9 @@
 basic.forever(function () {
-    if (input.temperature() > 22) {
-        basic.showString("¡Estoy hot!")
+    if (input.lightLevel() > 200) {
+        music._playDefaultBackground(music.builtInPlayableMelody(Melodies.Nyan), music.PlaybackMode.UntilDone)
+    } else if (input.lightLevel() < 50) {
+        music._playDefaultBackground(music.builtInPlayableMelody(Melodies.Ode), music.PlaybackMode.UntilDone)
     } else {
-        basic.showString("Frío como su corazón")
+    	
     }
 })
